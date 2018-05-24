@@ -1,7 +1,6 @@
-@Library('wolox-ci') 
+@Library('wolox-ci') _ 
 
 node {
-
   checkout scm
   git url: 'https://github.com/karthick87/jenkinsdemo'
   woloxCi('.woloxci/config.yml');
