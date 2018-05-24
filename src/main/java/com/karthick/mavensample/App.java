@@ -1,4 +1,4 @@
-package com.scmgalaxy.mavensample;
+package com.karthick.mavensample;
 
 /**
  * Hello world!
