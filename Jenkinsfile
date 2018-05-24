@@ -1,39 +1,11 @@
-pipeline {
-    agent any
-
-    stages {
-	stage ('Compile Stage') {
-            steps {
-		withMaven(maven : 'maven_3_5_3') {
-                    sh 'mvn clean compile'
-                 }
-            }
-        }   
-
-            
-        stage ('Testing Stage') {
-            steps {
-                withMaven(maven : 'maven_3_5_3') {
-                    sh 'mvn test'
-                }
-            }
-        }
-
-
-        stage ('Packaging Stage') {
-            steps {
-                withMaven(maven : 'maven_3_5_3') {
-                    sh 'mvn package'
-                 }
-             }
-        }
-
-        stage ('Deploy Stage') {
-            steps {
-                withMaven(maven : 'maven_3_5_3') {
-                    sh 'mvn deploy'
-                }
-             }
-        }
-    }
+node {
+    stage 'checkout'
+    echo 'Checking out source code'
+    git url: 'https://github.com/karthick87/jenkinsdemo'
+    stage 'compile'
+    echo "compile"
+    sh "/opt/apache-maven/bin/mvn compile"
+    stage 'test'
+    echo "Test"
+    sh "/opt/apache-maven/bin/mvn test"
 }
