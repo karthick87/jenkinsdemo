@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.scmgalaxy.mavensample</groupId>
+  <groupId>com.karthick.mavensample</groupId>
   <artifactId>my-maven</artifactId>
   <packaging>jar</packaging>
-  <version>2.0.0</version>
+  <version>1.0.0</version>
   <name>my-maven</name>
   <url>http://maven.apache.org</url>
 	
@@ -20,7 +20,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
   <build>
 	<plugins>
 		<plugin>
@@ -37,22 +36,16 @@
 		</plugin>
 	</plugins>
 	</build>
-  
 <distributionManagement>
     <repository>
-        <id>cts-nexus</id>
-        <name>bd7e4d6b271d-releases</name>
-        <url>http://13.127.1.164:8081/nexus/content/repositories/weekend/</url>
+        <id>demo-artifactory</id>
+        <name>Demo Releases</name>
+        <url>http://192.168.2.17:8081/artifactory/libs-release</url>
     </repository>
     <snapshotRepository>
-        <id>cts-nexus</id>
-        <name>bd7e4d6b271d-snapshots</name>
-        <url>http://13.127.1.164:8081/nexus/content/repositories/weekend/</url>
+        <id>demo-artifactory</id>
+        <name>Demo Releases</name>
+        <url>http://192.168.2.17:8081/artifactory/libs-snapshot</url>
     </snapshotRepository>
 </distributionManagement>
-
-
-
-
-
 </project>
