@@ -5,7 +5,7 @@ node {
 
     stage 'Build'
     echo "Starting clean compilation"
-    sh "/opt/apache-maven/bin/mvn compile"
+    sh "/opt/apache-maven/bin/mvn clean compile"
 
     stage 'Unit Test'
     echo "Running Test Cases"
