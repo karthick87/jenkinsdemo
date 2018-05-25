@@ -40,12 +40,12 @@
     <repository>
         <id>demo-artifactory</id>
         <name>Demo Releases</name>
-        <url>http://10.83.34.11:8018/artifactory/libs-release</url>
+        <url>http://192.168.1.4:8018/artifactory/libs-release</url>
     </repository>
     <snapshotRepository>
         <id>demo-artifactory</id>
         <name>Demo Releases</name>
-        <url>http://10.83.34.11:8018/artifactory/libs-snapshot</url>
+        <url>http://192.168.1.4:8018/artifactory/libs-snapshot</url>
     </snapshotRepository>
 </distributionManagement>
 </project>
