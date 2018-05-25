@@ -1,3 +1,8 @@
+tools { 
+    maven 'maven_3_5_3' 
+    jdk 'java_1_8' 
+}
+
 node {
     stage 'SCM Checkout'
     echo 'Checking out Source Code'
